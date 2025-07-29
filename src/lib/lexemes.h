@@ -104,5 +104,7 @@ lexemes {
 // OTHER
     LEX_OBJ_NAME_OT,
     LEX_VALUE_OT,
-    LEX_PASS_OT
+    LEX_PASS_OT,
+    LEX_NOTHING_OT,
+    LEX_END_PROGRAM_OT
 };
