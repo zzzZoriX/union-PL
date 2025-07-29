@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include "herror.h"
+#include "parse_cmd.h"
 
 #define EXT_OF_SRC_FILES ".u"
 #define EXT_OF_HEADER_FILES ".uh"
@@ -20,3 +21,4 @@
 
 #define SUCCESS 0
 #define ERROR 1
+#define VERSION "alpha-1.1"
