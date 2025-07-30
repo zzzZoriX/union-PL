@@ -31,6 +31,7 @@
 #define _FOR_KW "for"
 #define _RET_KW "ret"
 #define _END_KW "end"
+#define _STATIC_MD "static"
 #define _ASSIGN_SS "<=" 
 #define _EQ_SS "?="
 #define _NEQ_SS "?!="
@@ -39,8 +40,8 @@
 #define _OR_SS "||"
 #define _AND_SS "&&"
 #define _SEMIC_SC ";"
-#define _L_SS "<"
-#define _G_SS ">"
+#define _L_SC "<"
+#define _G_SC ">"
 #define _LPAREN_SC "("
 #define _RPAREN_SC ")"
 #define _LQPAREN_SC "["
@@ -89,10 +90,13 @@ lexemes {
     LEX_OR_SS,
     LEX_AND_SS,
 
+// MODIFIERS
+    LEX_STATIC_MD,
+
 // SPECIFIC SYMBOLS ( CHARS )
     LEX_SEMIC_SC,
-    LEX_L_SS,
-    LEX_G_SS,
+    LEX_L_SC,
+    LEX_G_SC,
     LEX_LPAREN_SC,
     LEX_RPAREN_SC,
     LEX_LQPAREN_SC,
@@ -112,6 +116,14 @@ lexemes {
 };
 
 /**
+ * @brief define lexeme by word
+ * 
+ * @return lexemes 
+ */
+lexemes
+define_lexeme(const std::string&);
+
+/**
  * @brief checks symbol if it is aa specific symbol (check lexemes for all spec symbols)
  * 
  * @return true 
@@ -128,3 +140,21 @@ is_spec_symbol(const char);
  */
 bool
 is_spec_string(const std::string&);
+
+/**
+ * @brief checks string if its all a digits
+ * 
+ * @return true 
+ * @return false 
+ */
+bool
+is_digits(const std::string&);
+
+/**
+ * @brief checks string if its a valid object name
+ * 
+ * @return true 
+ * @return false 
+ */
+bool
+is_valid_name(const std::string&);
