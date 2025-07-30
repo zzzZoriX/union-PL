@@ -11,6 +11,8 @@
 
 #pragma once
 
+#include <string>
+
 #define _OOP_PS "__OOP__"
 #define _PRC_PS "__PRC__"
 #define _FUN_PS "__FUN__"
@@ -108,3 +110,21 @@ lexemes {
     LEX_NOTHING_OT,
     LEX_END_PROGRAM_OT
 };
+
+/**
+ * @brief checks symbol if it is aa specific symbol (check lexemes for all spec symbols)
+ * 
+ * @return true 
+ * @return false 
+ */
+bool
+is_spec_symbol(const char);
+
+/**
+ * @brief checks string if it is a specific string (check lexemes for all spec strings)
+ * 
+ * @return true 
+ * @return false 
+ */
+bool
+is_spec_string(const std::string&);
